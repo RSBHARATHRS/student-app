@@ -3,21 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { SharedModule } from './shared/shared.module';
+import { LeftSideNavigatorComponent } from './components/left-side-navigator/left-side-navigator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent
+    LeftSideNavigatorComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SharedModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

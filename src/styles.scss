@@ -334,6 +334,7 @@ body.light-mode .video-bg:before {
  display: flex;
  flex-grow: 1;
  overflow: hidden;
+//  overflow: scroll;
 }
 
 .left-side {
@@ -505,7 +506,7 @@ body.light-mode .video-bg:before {
  display: -webkit-box;
  -webkit-line-clamp: 4;
  -webkit-box-orient: vertical;
- overflow: hidden;
+//  overflow: hidden;
  text-overflow: ellipsis;
 }
 
@@ -648,7 +649,7 @@ body.light-mode .video-bg:before {
 }
 
 @media screen and (max-width: 415px) {
- .adobe-product .menu {
+ .student-details .menu {
   display: none;
  }
 }

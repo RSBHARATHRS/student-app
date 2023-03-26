@@ -146,70 +146,8 @@ body.light-mode .video-bg:before {
  font-weight: 500;
 }
 
-.header {
- display: flex;
- align-items: center;
- flex-shrink: 0;
- height: 58px;
- width: 100%;
- border-bottom: 1px solid var(--border-color);
- padding: 0 30px;
- white-space: nowrap;
- @media screen and (max-width: 480px) {
-  padding: 0 16px;
- }
- &-menu {
-  display: flex;
-  align-items: center;
-  a {
-   padding: 20px 30px;
-   text-decoration: none;
-   color: var(--inactive-color);
-   border-bottom: 2px solid transparent;
-   transition: 0.3s;
-   @media screen and (max-width: 610px) {
-    &:not(.main-header-link) {
-     display: none;
-    }
-   }
-   &.is-active,
-   &:hover {
-    color: var(--theme-color);
-    border-bottom: 2px solid var(--theme-color);
-   }
-  }
- }
-}
 
-.notify {
- position: relative;
- &:before {
-  content: "";
-  position: absolute;
-  background-color: #3a6df0;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  right: 20px;
-  top: 16px;
- }
- @media screen and (max-width: 1055px) {
-  display: none;
- }
-}
 
-.menu-circle {
- width: 15px;
- height: 15px;
- background-color: #f96057;
- border-radius: 50%;
- box-shadow: 24px 0 0 0 #f8ce52, 48px 0 0 0 #5fcf65;
- margin-right: 195px;
- flex-shrink: 0;
- @media screen and (max-width: 945px) {
-  display: none;
- }
-}
 
 .search-bar {
  height: 40px;
@@ -289,40 +227,6 @@ body.light-mode .video-bg:before {
  object-fit: cover;
  border: 2px solid var(--theme-color);
  margin-left: 22px;
-}
-
-.wide {
- .header-menu,
- .header-profile {
-  display: none;
- }
- .search-bar {
-  max-width: 600px;
-  margin: auto;
-  transition: 0.4s;
-  box-shadow: 0 0 0 1px var(--border-color);
-  padding-left: 0;
- }
- .menu-circle {
-  margin-right: 0;
- }
-}
-
-.wrapper {
- display: flex;
- flex-grow: 1;
- overflow: hidden;
-}
-
-.left-side {
- flex-basis: 240px;
- border-right: 1px solid var(--border-color);
- padding: 26px;
- overflow: auto;
- flex-shrink: 0;
- @media screen and (max-width: 945px) {
-  display: none;
- }
 }
 
 .side-wrapper + .side-wrapper {
@@ -626,7 +530,7 @@ body.light-mode .video-bg:before {
 }
 
 @media screen and (max-width: 415px) {
- .adobe-product .menu {
+ .student-details .menu {
   display: none;
  }
 }
