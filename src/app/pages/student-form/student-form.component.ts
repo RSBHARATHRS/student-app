@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { countryList } from 'src/app/mock/data/mock-index';
 
 @Component({
   selector: 'app-student-form',
@@ -8,6 +9,7 @@ import { Component } from '@angular/core';
 
 export class StudentFormComponent {
 
+  countryList = countryList;
 
   constructor() {
     // this.voiceRecognitionServiceService.init();
