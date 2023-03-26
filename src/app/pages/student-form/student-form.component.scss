@@ -1,3 +1,7 @@
+:root{
+  --content-bg: rgb(146 151 179 / 13%);
+}
+
 .form-cnt {
   margin: 40px;
   border: 0px solid black;
@@ -20,9 +24,12 @@
 
       input,
       select {
+        // color: white;
+        // background: var(--content-bg);
         &:focus {
           border: 2px solid green;
           border-radius: 4px;
+          background-color: var(--content-bg);
         }
       }
     }
@@ -42,7 +49,8 @@ select,
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
-  background: #f1f1f1;
+  color: #f1f1f1;
+  background: var(--content-bg);
 }
 
 .chk-container {
