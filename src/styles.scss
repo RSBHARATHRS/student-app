@@ -203,23 +203,6 @@ body.light-mode .video-bg:before {
  }
 }
 
-.notify {
- position: relative;
- &:before {
-  content: "";
-  position: absolute;
-  background-color: #3a6df0;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  right: 20px;
-  top: 16px;
- }
- @media screen and (max-width: 1055px) {
-  display: none;
- }
-}
-
 .menu-circle {
  width: 15px;
  height: 15px;
@@ -881,3 +864,7 @@ body.light-mode .video-bg:before {
 
 
 
+// .cdk-overlay-container {
+//   position: fixed!important;
+//   z-index: 1000!important;
+// }
