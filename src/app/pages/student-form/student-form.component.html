@@ -32,17 +32,15 @@
         </div>
 
         <div class="question">
-          <label for="plang" id="vr-Question-dropdown"><b>Primary language</b></label>
-          <select id="vr-ans-dropdown" name="plang">
-            <option *ngFor="let country of countryList" [value]="country?.name">{{country?.name}}</option>
+          <label for="plang" id="vr-Question-plang"><b>Primary language</b></label>
+          <select id="vr-ans-plang" name="plang">
+            <option *ngFor="let lang of primaryLang" [value]="lang?.value">{{lang?.value}}</option>
           </select>
         </div>
 
-
-
         <div class="question">
-          <label for="nation" id="vr-Question-dropdown"><b>Country</b></label>
-          <select id="vr-ans-dropdown" name="nation">
+          <label for="nation" id="vr-Question-country"><b>Country</b></label>
+          <select id="vr-ans-country" name="nation">
             <option *ngFor="let country of countryList" [value]="country?.name">{{country?.name}}</option>
           </select>
         </div>
@@ -51,14 +49,10 @@
           <label for="nation" id="vr-Question-language"><b>I Would Like to Study In</b></label>
           <br>
           <div class="radio">
-            <input type="radio" id="vr-ans-language-html" name="fav_language" value="HTML">
-            <label for="vr-ans-language-html">Australia</label><br>
-            <input type="radio" id="vr-ans-language-css" name="fav_language" value="CSS">
-            <label for="vr-ans-language-css">Canada</label><br>
-            <input type="radio" id="vr-ans-language-javascript" name="fav_language" value="JavaScript">
-            <label for="vr-ans-language-javascript">France</label><br>
-            <input type="radio" id="vr-ans-language-germany" name="fav_language" value="JavaScript">
-            <label for="vr-ans-language-javascript">Germany</label><br>
+            <ng-container *ngFor="let country of studyAbroad">
+              <input type="radio" [id]="'vr-ans-language-' + country?.id" name="fav_language" [value]="country?.value">
+              <label [for]="'vr-ans-language-' + country?.id">{{country?.value}}</label><br>
+            </ng-container>
           </div>
         </div>
 
@@ -86,13 +80,10 @@
           </div>
         </div>
 
-
         <div class="question">
           <label for="range"><b>Please select your range:</b></label>
           <input type="range" id="vr-ans-range" name="range">
         </div>
-
-
 
         <div class="question">
           <label for="points"><b>Enter points (1 to 10):</b></label>
