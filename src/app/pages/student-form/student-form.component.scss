@@ -1,5 +1,6 @@
 :root {
   --content-bg: rgb(146 151 179 / 13%);
+  --text-color: black;
 }
 
 .form-cnt {
@@ -58,7 +59,7 @@ select,
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
-  color: #f1f1f1;
+  color: var(--text-color);
   background: var(--content-bg);
 }
 

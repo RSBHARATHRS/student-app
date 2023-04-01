@@ -7,11 +7,6 @@
         <hr>
 
         <div class="question">
-          <label for="email" id="vr-Question-email"><b>Email</b></label>
-          <input type="text" id="vr-ans-email" placeholder="Enter Email" name="email" required>
-        </div>
-
-        <div class="question">
           <label for="firstname" id="vr-Question-firstname"><b>First Name</b></label>
           <input type="text" id="vr-ans-firstname" placeholder="First Name" name="firstname" required>
         </div>
@@ -22,14 +17,28 @@
         </div>
 
         <div class="question">
+          <label for="email" id="vr-Question-email"><b>Email</b></label>
+          <input type="text" id="vr-ans-email" placeholder="Enter Email" name="email" required>
+        </div>
+
+        <div class="question">
+          <label for="birthdaytime" id="vr-ques-birthdaytime"><b>Date of birth</b></label>
+          <input type="datetime-local" id="vr-ans-birthdaytime" name="birthdaytime">
+        </div>
+
+        <div class="question">
           <label for="age" id="vr-Question-age"><b>Age</b></label>
           <input type="text" id="vr-ans-age" placeholder="Age" name="age" required>
         </div>
 
-        <!-- <div class="question">
-          <label for="psw" id="vr-Question-pws"><b>Password</b></label>
-          <input type="text" id="vr-ans-pws" placeholder="Password" name="psw" required>
-        </div> -->
+        <div class="question">
+          <label for="plang" id="vr-Question-dropdown"><b>Primary language</b></label>
+          <select id="vr-ans-dropdown" name="plang">
+            <option *ngFor="let country of countryList" [value]="country?.name">{{country?.name}}</option>
+          </select>
+        </div>
+
+
 
         <div class="question">
           <label for="nation" id="vr-Question-dropdown"><b>Country</b></label>
@@ -39,39 +48,41 @@
         </div>
 
         <div class="question">
-          <label for="nation" id="vr-Question-language"><b>Please select your favorite Web language:</b></label>
+          <label for="nation" id="vr-Question-language"><b>I Would Like to Study In</b></label>
           <br>
           <div class="radio">
             <input type="radio" id="vr-ans-language-html" name="fav_language" value="HTML">
-            <label for="vr-ans-language-html">HTML</label><br>
+            <label for="vr-ans-language-html">Australia</label><br>
             <input type="radio" id="vr-ans-language-css" name="fav_language" value="CSS">
-            <label for="vr-ans-language-css">CSS</label><br>
+            <label for="vr-ans-language-css">Canada</label><br>
             <input type="radio" id="vr-ans-language-javascript" name="fav_language" value="JavaScript">
-            <label for="vr-ans-language-javascript">JavaScript</label><br>
+            <label for="vr-ans-language-javascript">France</label><br>
+            <input type="radio" id="vr-ans-language-germany" name="fav_language" value="JavaScript">
+            <label for="vr-ans-language-javascript">Germany</label><br>
           </div>
         </div>
 
+        <div class="question">
+          <label for="siteid" id="vr-Question-dropdown"><b>Site ID</b></label>
+          <select id="vr-ans-dropdown" name="siteid">
+            <option *ngFor="let country of countryList" [value]="country?.name">{{country?.name}}</option>
+          </select>
+        </div>
+
         <div class="question" id="vr-div-subject">
-          <label><b>Please select your favorite subject:</b></label><br>
+          <label><b>How did you Hear?</b></label><br>
           <div class="checkbox">
             <input type="checkbox" id="vr-ans-subject-1">
-            <span class="checkmark"></span>
-            <label for="vr-ans-subject-1">Computer Science </label><br>
-
+            <label for="vr-ans-subject-1">Newpaper Ad</label><br>
 
             <input type="checkbox" id="vr-ans-subject-2">
-            <span class="checkmark"></span>
-            <label for="vr-ans-subject-2">Accounts</label><br>
-
+            <label for="vr-ans-subject-2">Social Media</label><br>
 
             <input type="checkbox" id="vr-ans-subject-3">
-            <span class="checkmark"></span>
-            <label for="vr-ans-subject-3">Arts </label><br>
-
+            <label for="vr-ans-subject-3">Radio</label><br>
 
             <input type="checkbox" id="vr-ans-subject-4">
-            <span class="checkmark"></span>
-            <label for="vr-ans-subject-4">Bussiness </label><br>
+            <label for="vr-ans-subject-4">Friends and family</label><br>
           </div>
         </div>
 
@@ -81,10 +92,7 @@
           <input type="range" id="vr-ans-range" name="range">
         </div>
 
-        <div class="question">
-          <label for="birthdaytime" id="vr-ques-birthdaytime"><b>Birthday (date and time):</b></label>
-          <input type="datetime-local" id="vr-ans-birthdaytime" name="birthdaytime">
-        </div>
+
 
         <div class="question">
           <label for="points"><b>Enter points (1 to 10):</b></label>
@@ -95,10 +103,6 @@
           <label for="color-picker"><b>Pick your favourite color:</b></label>
           <input type="color" id="vr-ans-color" name="color-picker">
         </div>
-
-        <!-- <label>
-          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-        </label> -->
 
         <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
