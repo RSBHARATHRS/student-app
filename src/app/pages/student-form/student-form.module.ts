@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { StudentFormRoutingModule } from './student-form-routing.module';
 import { StudentFormComponent } from './student-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { StudentFormComponent } from './student-form.component';
   ],
   imports: [
     CommonModule,
-    StudentFormRoutingModule
+    StudentFormRoutingModule,
+    ReactiveFormsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

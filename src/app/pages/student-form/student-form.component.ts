@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { qualifications } from 'src/app/core/data/qualification.data';
+import { ApiService } from 'src/app/core/services/api.service';
 import { primaryLang } from 'src/app/mock/data/data';
 import { countryList, studyAbroad } from 'src/app/mock/data/mock-index';
 
@@ -9,11 +11,12 @@ import { countryList, studyAbroad } from 'src/app/mock/data/mock-index';
   styleUrls: ['./student-form.component.scss']
 })
 
-export class StudentFormComponent {
+export class StudentFormComponent implements OnInit {
 
   countryList = countryList;
   studyAbroad = studyAbroad;
   primaryLang = primaryLang;
+  qualifications = qualifications;
 
   studentForm: FormGroup<any> = new FormGroup<any>({
     firstName: new FormControl('', { nonNullable: true }),
@@ -21,22 +24,27 @@ export class StudentFormComponent {
     email: new FormControl('', { nonNullable: true }),
     age: new FormControl('', { nonNullable: true }),
     dob: new FormControl('', { nonNullable: true }),
+    gender: new FormControl('', { nonNullable: true }),
     siteId: new FormControl('', { nonNullable: true }),
-    // lastName: new FormControl([], { nonNullable: true }),
+    pLang: new FormControl([], { nonNullable: true }),
     subLang: new FormControl('', { nonNullable: true }),
   });
 
-  constructor() {
+  constructor(private apiService: ApiService) {
     // this.voiceRecognitionServiceService.init();
   }
 
-
-  cancel() {
+  ngOnInit(): void {
 
   }
 
-  signUp() {
+  reset() {
+    this.studentForm.reset();
+  }
 
+  addStudent() {
+    console.log(this.studentForm.value, "add student");
+    this.apiService.addStudentWithExistingData(this.studentForm.value);
   }
 
 }
