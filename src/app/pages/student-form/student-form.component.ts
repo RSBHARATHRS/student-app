@@ -24,9 +24,12 @@ export class StudentFormComponent implements OnInit {
     email: new FormControl('', { nonNullable: true }),
     age: new FormControl('', { nonNullable: true }),
     dob: new FormControl('', { nonNullable: true }),
+    qualification: new FormControl('', { nonNullable: true }),
     gender: new FormControl('', { nonNullable: true }),
     siteId: new FormControl('', { nonNullable: true }),
-    pLang: new FormControl([], { nonNullable: true }),
+    primaryLang: new FormControl([], { nonNullable: true }),
+    country: new FormControl('', { nonNullable: true }),
+    likeToStudyIn: new FormControl('', { nonNullable: true }),
     subLang: new FormControl('', { nonNullable: true }),
   });
 

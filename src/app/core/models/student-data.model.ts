@@ -4,5 +4,6 @@ export interface StudentData {
   email: string,
   age: number,
   qualification: string,
+  primaryLang: string,
   gender: 'male' | 'female'
 }

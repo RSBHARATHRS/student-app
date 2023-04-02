@@ -38,7 +38,7 @@
             <br>
             <div class="radio">
               <ng-container *ngFor="let gender of ['male', 'female']">
-                <input type="radio" [id]="'vr-ans-language-' + gender" name="fav_language"
+                <input type="radio" [id]="'vr-ans-language-' + gender" name="gender"
                   [value]="gender" formControlName="gender">
                 <label [for]="'vr-ans-language-' + gender">{{gender}}</label><br>
               </ng-container>
@@ -46,41 +46,41 @@
           </div>
 
           <div class="question">
-            <label for="qual" id="vr-Question-plang"><b>qualification</b></label>
-            <select id="vr-ans-qual" name="qual" formControlName="pLang">
+            <label for="qualification" id="vr-Question-qual"><b>qualification</b></label>
+            <select id="vr-ans-qual" name="qualification" formControlName="qualification">
               <option *ngFor="let qual of qualifications" [value]="qual?.qual">{{qual?.qual}}</option>
             </select>
           </div>
 
           <div class="question">
-            <label for="plang" id="vr-Question-plang"><b>Primary language</b></label>
-            <select id="vr-ans-plang" name="plang" formControlName="pLang">
+            <label for="primaryLang" id="vr-Question-plang"><b>Primary language</b></label>
+            <select id="vr-ans-plang" name="primaryLang" formControlName="primaryLang">
               <option *ngFor="let lang of primaryLang" [value]="lang?.value">{{lang?.value}}</option>
             </select>
           </div>
 
           <div class="question">
-            <label for="nation" id="vr-Question-country"><b>Country</b></label>
-            <select id="vr-ans-country" name="nation">
+            <label for="country" id="vr-Question-country"><b>Country</b></label>
+            <select id="vr-ans-country" name="country" formControlName="country">
               <option *ngFor="let country of countryList" [value]="country?.name">{{country?.name}}</option>
             </select>
           </div>
 
           <div class="question">
-            <label for="nation" id="vr-Question-language"><b>I Would Like to Study In</b></label>
+            <label for="likeToStudyIn" id="vr-Question-likeToStudyIn"><b>I Would Like to Study In</b></label>
             <br>
             <div class="radio">
               <ng-container *ngFor="let country of studyAbroad">
-                <input type="radio" [id]="'vr-ans-language-' + country?.id" name="fav_language"
-                  [value]="country?.value">
-                <label [for]="'vr-ans-language-' + country?.id">{{country?.value}}</label><br>
+                <input type="radio"  formControlName="likeToStudyIn" [id]="'vr-ans-likeToStudyIn-' + country?.id" name="likeToStudyIn"
+                  [value]="country?.value" >
+                <label [for]="'vr-ans-likeToStudyIn-' + country?.id">{{country?.value}}</label><br>
               </ng-container>
             </div>
           </div>
 
           <div class="question">
-            <label for="siteid" id="vr-Question-dropdown"><b>Site ID</b></label>
-            <select id="vr-ans-dropdown" name="siteid">
+            <label for="siteid" id="vr-Question-siteid"><b>Site ID</b></label>
+            <select id="vr-ans-siteid" name="siteid" formControlName="siteId">
               <option *ngFor="let country of countryList" [value]="country?.name">{{country?.name}}</option>
             </select>
           </div>

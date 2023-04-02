@@ -1,5 +1,5 @@
 <div class="content-section">
-  <div class="content-section-title">Apps in your plan</div>
+  <div class="content-section-title">Student management system</div>
   <div class="apps-card">
     <div class="app-card">
       <span>
@@ -17,8 +17,8 @@
       </span>
       <div class="app-card__subtext">Edit, master and create fully proffesional videos</div>
       <div class="app-card-buttons">
-        <button class="content-button status-button">Update</button>
-        <div class="menu"></div>
+        <button class="content-button status-button" (click)="navigateToAdd('/student-form')">View</button>
+        <!-- <div class="menu"></div> -->
       </div>
     </div>
     <div class="app-card">
@@ -33,12 +33,12 @@
               fill="#e1c1cf" data-original="#ff70bd" />
           </g>
         </svg> -->
-        View all student informations
+        Student list
       </span>
       <div class="app-card__subtext">Design and publish great projects & mockups</div>
       <div class="app-card-buttons">
-        <button class="content-button status-button">Update</button>
-        <div class="menu"></div>
+        <button class="content-button status-button" (click)="navigateToAdd('/student-list')">View</button>
+        <!-- <div class="menu"></div> -->
       </div>
     </div>
     <div class="app-card">
@@ -53,12 +53,12 @@
               fill="#e4d1eb" data-original="#e7adfb" />
           </g>
         </svg> -->
-        After Effects
+        Student details
       </span>
       <div class="app-card__subtext">Industry Standart motion graphics & visual effects</div>
       <div class="app-card-buttons">
-        <button class="content-button status-button">Update</button>
-        <div class="menu"></div>
+        <button class="content-button status-button" (click)="navigateToAdd('/student-form')">View</button>
+        <!-- <div class="menu"></div> -->
       </div>
     </div>
   </div>
