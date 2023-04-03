@@ -19,23 +19,24 @@
 
   .container {
     .question {
-      input[type=color] {
-        background: var(--content-bg);
-        padding: 1px;
-        margin: 0 0 22px 20px;
-      }
-
       input,
       select {
         option {
           color: black;
         }
-
         &:focus {
           border: 2px solid green;
           border-radius: 4px;
           background-color: var(--content-bg);
         }
+
+        &:focus + label {
+          box-shadow: 0 0 4px 2px green;
+          border-radius: 8px;
+          padding: 1px 3px;
+          // color: #04AA6D;
+        }
+
       }
     }
   }
@@ -73,6 +74,10 @@ input[type=checkbox] {
   display: inline-block;
   border: none;
   background: #f1f1f1;
+}
+
+.tandc{
+  margin: 0 0 10px 0;
 }
 
 input[type=text]:focus,

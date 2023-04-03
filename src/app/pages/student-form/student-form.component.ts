@@ -31,6 +31,8 @@ export class StudentFormComponent implements OnInit {
     country: new FormControl('', { nonNullable: true }),
     likeToStudyIn: new FormControl('', { nonNullable: true }),
     subLang: new FormControl('', { nonNullable: true }),
+    range: new FormControl('0', { nonNullable: true }),
+    acceptTerms: new FormControl(false, { nonNullable: true }),
   });
 
   constructor(private apiService: ApiService) {
