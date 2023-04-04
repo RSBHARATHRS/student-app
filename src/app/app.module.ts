@@ -5,6 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { LeftSideNavigatorComponent } from './components/left-side-navigator/left-side-navigator.component';
+import { environment } from 'src/environments/environment';
+
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+// Initialize Firebase
+const app = initializeApp(environment.firebaseConfig);
+const analytics = getAnalytics(app);
 
 @NgModule({
   declarations: [
@@ -20,5 +28,9 @@ import { LeftSideNavigatorComponent } from './components/left-side-navigator/lef
   providers: [],
   bootstrap: [AppComponent]
 })
+
+
+
+
 
 export class AppModule { }
