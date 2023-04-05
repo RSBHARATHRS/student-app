@@ -246,7 +246,7 @@ export const countryList = [
 
 export const studyAbroad = [
   { id: 1, value: 'Australia' },
-  { id: 2, value: 'Canada' },
+  { id: 2, value: 'England' },
   { id: 3, value: 'France' },
   { id: 4, value: 'Germany' },
 ]

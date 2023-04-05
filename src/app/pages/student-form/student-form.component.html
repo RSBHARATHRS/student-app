@@ -20,7 +20,7 @@
 
           <div class="question">
             <label for="email" id="vr-Question-email"><b>Email</b></label>
-            <input type="text" id="vr-ans-email" formControlName="email" placeholder="Enter Email" name="email" required>
+            <input type="email" id="vr-ans-email" formControlName="email" placeholder="Enter Email" name="email" required>
           </div>
 
           <div class="question">
@@ -33,7 +33,7 @@
             <input type="text" id="vr-ans-age" formControlName="age" placeholder="Age" name="age" required>
           </div>
 
-          <div class="question">
+          <!-- <div class="question">
             <label for="nation" id="vr-Question-language"><b>Gender</b></label>
             <br>
             <div class="radio">
@@ -43,7 +43,7 @@
                 <label [for]="'vr-ans-language-' + gender">{{gender}}</label><br>
               </ng-container>
             </div>
-          </div>
+          </div> -->
 
           <div class="question">
             <label for="qualification" id="vr-Question-qual"><b>qualification</b></label>
@@ -101,16 +101,6 @@
               <label for="vr-ans-subject-4">Friends and family</label><br>
             </div>
           </div>
-
-          <!-- <div class="question">
-            <label for="range"><b>Please select your range: {{studentForm.value.range}}</b></label>
-            <input type="range" id="vr-ans-range" formControlName="range" name="range" min="0" max="100">
-          </div> -->
-
-          <!-- <div class="question">
-            <label for="points"><b>Enter points (1 to 10):</b></label>
-            <input type="number" max="10" id="vr-ans-number" name="points">
-          </div> -->
 
           <div class="tandc">
             <input type="checkbox" id="vr-ans-tandc-1" formControlName="acceptTerms" style="float: left;">
